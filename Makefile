@@ -16,4 +16,10 @@ migrateup:
 	migrate -path db/migration -database "$(DB_URL)" -verbose up
 
 migratedown:
-	migrate -path db/migration -database "$(DB_URL)" -verbose down	
+	migrate -path db/migration -database "$(DB_URL)" -verbose down
+
+sqlc:
+	sqlc generate
+
+.PHONY: network postgres createdb dropdb migrateup migratedown sqlc
+
