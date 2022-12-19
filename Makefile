@@ -20,6 +20,9 @@ migratedown:
 
 sqlc:
 	sqlc generate
+	
+server:
+	go run main.go	
 
 .PHONY: network postgres createdb dropdb migrateup migratedown sqlc
 
